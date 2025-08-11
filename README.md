@@ -168,7 +168,7 @@ En la vista previa: Ctrl+Shift+P → PlantUML: Export Current Diagram.
 Elige PNG o SVG y guárdalo en docs/diagram.png (o docs/diagram.svg).
 
 
-![DIAGRAMA UML](src\main\resources\pizza-class-diagram.png)
+![DIAGRAMA UML](src/main/resources/pizza-class-diagram.png)
 ---
 
 ## 📈 Beneficios del refactor
