@@ -167,25 +167,8 @@ En la vista previa: Ctrl+Shift+P → PlantUML: Export Current Diagram.
 
 Elige PNG o SVG y guárdalo en docs/diagram.png (o docs/diagram.svg).
 
-4) Inserta la imagen en este README
-Coloca el archivo exportado en la carpeta docs/ y agrega esta línea aquí mismo:
 
-markdown
-Copiar
-Editar
-![Diagrama de arquitectura](docs/diagram.png)
-(Si prefieres HTML para controlar el tamaño: <img src="docs/diagram.png" width="900" />)
-
-5) (Opcional) Actualizar el diagrama
-Cada vez que cambie el modelo:
-
-bash
-Copiar
-Editar
-mvn clean process-classes
-Vuelve a exportar la imagen y reemplaza docs/diagram.png.
-
-![alt text](out/target/generated-docs/pizza-class-diagram/pizza-class-diagram.png)
+![DIAGRAMA UML](src\main\resources\pizza-class-diagram.png)
 ---
 
 ## 📈 Beneficios del refactor
