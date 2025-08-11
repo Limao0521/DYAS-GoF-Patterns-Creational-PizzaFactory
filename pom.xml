@@ -7,7 +7,38 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>de.elnarion.maven</groupId>
+      <artifactId>plantuml-generator-maven-plugin</artifactId>
+      <version>3.0.1</version>
+      <executions>
+        <execution>
+          <id>uml</id>
+          <phase>process-classes</phase>
+          <goals><goal>generate</goal></goals>
+          <configuration>
+            <outputDirectory>${project.build.directory}/generated-docs</outputDirectory>
+            <outputFilename>pizza-class-diagram.puml</outputFilename>
+            <scanPackages>
+              <scanPackage>edu.unisabana.pizzafactory</scanPackage>
+            </scanPackages>
+
+            <!-- Clave para que salgan los métodos -->
+            <hideFields>false</hideFields>
+            <hideMethods>false</hideMethods>
+            <showConstructors>true</showConstructors>
+            <!-- Opcional: limita por visibilidad -->
+            <!-- <methodVisibility>PUBLIC</methodVisibility> -->
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+
 </project>
